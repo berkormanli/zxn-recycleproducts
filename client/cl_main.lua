@@ -99,15 +99,15 @@ end
 Citizen.CreateThread(function()
 	Citizen.Wait(1)
 	Config.Blip = AddBlipForCoord(Config.Location.x, Config.Location.y)
-	SetBlipSprite(blip, 467)
-	SetBlipScale(blip, 0.70)
-	SetBlipColour(blip, 33)
-	SetBlipDisplay(blip, 4)
-	SetBlipAsShortRange(blip, true)
+	SetBlipSprite(Config.Blip, 467)
+	SetBlipScale(Config.Blip, 0.70)
+	SetBlipColour(Config.Blip, 33)
+	SetBlipDisplay(Config.Blip, 4)
+	SetBlipAsShortRange(Config.Blip, true)
 
 	BeginTextCommandSetBlipName("STRING")
 	AddTextComponentString(Lang:t("info.BlipName"))
-	EndTextCommandSetBlipName(blip)
+	EndTextCommandSetBlipName(Config.Blip)
 end)
 
 ------------ NPC Creation ------------
